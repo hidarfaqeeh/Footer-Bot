@@ -22,10 +22,10 @@ async def ShowSettings(event: Message, user_id: int):
     also_footer2photo = await db.get_add_photo_footer(user_id)
     channel_id = await db.get_channel_id(user_id)
     markup = [
-        [InlineKeyboardButton(f"Service is {'ON' if (service_on is True) else 'OFF'} ✅", callback_data="triggerService")],
-        [InlineKeyboardButton("Set Footer Text", callback_data="setFooterText")],
-        [InlineKeyboardButton(f"Also Apply Footer to Photo {'ON' if (also_footer2text is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Text")],
-        [InlineKeyboardButton(f"Also Apply Footer to Text {'ON' if (also_footer2photo is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Photo")]
+        [InlineKeyboardButton(f"الخدمة {'مفعلة' if (service_on is True) else 'معطلة'} ✅", callback_data="triggerService")],
+        [InlineKeyboardButton("ضبط حقوق القناه ", callback_data="setFooterText")],
+        [InlineKeyboardButton(f"وضع الحقوق ع الصور  {'مفعل' if (also_footer2text is True) else 'معطل'} ✅", callback_data="setAlsoFooter2Text")],
+        [InlineKeyboardButton(f"وضع الحقوق على النصوص {'مفعل' if (also_footer2photo is True) else 'معطل'} ✅", callback_data="setAlsoFooter2Photo")]
     ]
     # Bug <<<
     if footer_ is not None:
