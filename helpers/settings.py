@@ -29,15 +29,15 @@ async def ShowSettings(event: Message, user_id: int):
     ]
     # Bug <<<
     if footer_ is not None:
-        markup.append([InlineKeyboardButton("Remove Footer Text", callback_data="rmFooterText"),
-                       InlineKeyboardButton("Show Footer Text", callback_data="showFooterText")])
+        markup.append([InlineKeyboardButton("حذف حقوق القناة", callback_data="rmFooterText"),
+                       InlineKeyboardButton("عرض الحقوق الحاليه", callback_data="showFooterText")])
     if channel_id is None:
-        markup.append([InlineKeyboardButton("Set Channel ID", callback_data="setChannelID")])
+        markup.append([InlineKeyboardButton("ضبط ايدي القناة", callback_data="setChannelID")])
     else:
-        markup.append([InlineKeyboardButton("Change Channel ID", callback_data="setChannelID")])
+        markup.append([InlineKeyboardButton("تغيير ايدي القناة", callback_data="setChannelID")])
     try:
         await event.edit(
-            text="Here You Can Set Your Settings:",
+            text="من هنا تستطيع تغيير الاعدادات:",
             reply_markup=InlineKeyboardMarkup(markup)
         )
     except FloodWait as e:
