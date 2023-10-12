@@ -14,7 +14,7 @@ async def ForceSub(bot: Client, cmd: Message):
             await bot.send_message(
                 chat_id=cmd.chat.id,
                 text="Sorry Unkil, You are Banned! You will be Kicked from This Group within 15 Seconds.\n"
-                     "Contact: [Support Group](https://t.me/linux_repo).",
+                     "للمساعدة: [قروب البوت](https://t.me/forumyemen).",
                 disable_web_page_preview=True,
                 reply_to_message_id=cmd.message_id
             )
@@ -39,7 +39,7 @@ async def ForceSub(bot: Client, cmd: Message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🤖 Join Channel 🤖", url=invite_link.invite_link)]
+                    [InlineKeyboardButton("🤖  انضم لقناة البوت 🤖", url=invite_link.invite_link)]
                 ]
             )
         )
