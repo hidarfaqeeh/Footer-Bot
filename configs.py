@@ -14,7 +14,7 @@ class Config(object):
     BOT_OWNER = int(os.environ.get("BOT_OWNER", 1445283714))
     MONGODB_URI = os.environ.get("MONGODB_URI", "")
     START_TEXT = """
-Hi, I am Channel Broadcast Footer Bot!
-
-I can add footer to Channel Media Messages. Just add me to the channel as Admin with all rights and setup /settings !!
-"""
+مرحبا بك في بوت تعديل حقوق القناة
+انا اقوم بوضع رابط او نص تلقائيا اخر أي منشور بالقناه 
+فقط قم بوضعي مشرف مع اعطائي الصلاحيات 
+ثم ارسل بالقناه الامر /settings"""
